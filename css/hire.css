@@ -1,0 +1,41 @@
+.hire-list {
+	width: 1040px;
+	margin:  45px auto;
+	background:rgba(250,250,250,1);
+}
+.hire-item {
+	position: relative;
+	padding: 30px;
+}
+.hire-item + .hire-item {
+	border-top: 2px solid #395DAD;
+}
+.hire-title {
+	color: #393939;
+	font-size: 26px;
+}
+.hire-date {
+	color: #B9B9B9;
+	font-size: 16px;
+}
+.hire-info {
+	display: flex;
+	color: #393939;
+	font-size: 18px;
+	margin: 10px 0;
+}
+.hire-info > div+div {
+	margin-left: 30px;
+}
+.hire-btn {
+	width:100px;
+	height:35px;
+	background:rgba(57,93,173,1);
+	color: #fff;
+	border-radius:2px;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 30px;
+	right: 30px; 
+}

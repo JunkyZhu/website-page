@@ -1,0 +1,76 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+.navbar-brand {
+    /*height: 80px;*/
+    color: blue;
+}
+.navbar {
+    background: #fff;
+    border-color: none;
+}
+.navbar.curr {
+    background: rgba(244, 244, 244, 0.4)
+}
+.nav.navbar-nav.curr .active a {
+    color: #fff;
+}
+.navbar-brand img {
+    height: 30px;
+    margin-top: 12px;
+}
+.nav.navbar-nav a {
+    color: #393939;
+    font-size: 16px;
+    padding: 15px 10px;
+    margin-left: 10px;
+}
+
+.nav.navbar-nav a:hover,
+.nav.navbar-nav .active a {
+    border-bottom: 4px solid #395dad;
+    color: #395dad;
+    background: none;
+    cursor: pointer;
+}
+.nav-product-list {
+    display: none;
+	position: absolute;
+    top: 54px;
+    width: 100%;
+    left: 0;
+    background-color: rgba(203,203,203,0.6);
+    color: #fff;
+    padding: 15px 0;
+}
+.nav-product-list .item {
+	margin: 0 30px;
+}
+.nav-product-list .item .list{
+	font-size: 16px;
+	color: #fff;
+    cursor: pointer
+}
+.nav-product-list .item .list:hover {
+    color: #395dad
+}
+.nav-product-list .item .list:not(last-child) {
+	margin-top: 10px;
+}
+.nav-product-list .title {
+	color: #395dad;
+	margin-top: 15px;
+	font-size: 18px;
+}
+#carousel-example-generic {
+    /* margin-top: 54px; */
+}
+
+.flex {
+    display: flex;
+
+}
+
+.flex-align {
+    align-items: center;
+}

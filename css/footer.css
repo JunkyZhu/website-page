@@ -1,0 +1,22 @@
+.footer-nav {
+	justify-content: center;
+}
+.footer-nav a {
+	padding: 0 20px;
+	color: #395dad
+}
+.footer-nav a + a {
+	border-left: 1px solid #395dad
+}
+.footer .base-info {
+font-size:14px;
+font-family:Helvetica;
+color:rgba(102,102,102,1);
+margin-top: 30px;
+}
+.footer .copyright {
+	text-align: center;
+	font-size: 16px;
+	color: #A2A2A2;
+	margin-top: 30px;
+}

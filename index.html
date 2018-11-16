@@ -8,7 +8,9 @@
     <title>新程</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -18,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav id="nav-bg" class="navbar navbar-default navbar-fixed-top curr">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -27,18 +29,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="image/logo.png" style="width: 110px;height: 40px" alt="">	</a>
+                <a class="navbar-brand" href="#" style="padding: 0"><img src="image/logo1.png" alt="">	</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#about">关于新程</a></li>
-                    <li><a href="#contact">产品&方案</a></li>
-                    <li><a href="#contact">新闻</a></li>
-                    <li><a href="#contact">服务</a></li>
-                    <li><a href="#contact">人才招聘</a></li>
-                    <li><a href="#contact">相关下载</a></li>
-                    <li><a href="#contact">联系我们</a></li>
+                    <li class="active"><a href="./index.html">首页</a></li>
+                    <li><a href="./about.html">关于新程</a></li>
+                    <li id="productNav"><a href="./product.html">产品&方案</a></li>
+                    <li><a href="./news.html">新闻</a></li>
+                    <li><a href="./service.html">服务</a></li>
+                    <li><a href="./hire.html">人才招聘</a></li>
+                    <li><a href="./download.html">相关下载</a></li>
+                    <li><a href="./contact.html">联系我们</a></li>
                 </ul>
             </div>
             <div class="nav-product-list">
@@ -245,7 +247,7 @@
             <div class="title-en">Service</div>
             <div class="clearfix content">
                 <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
+                    <img src="image/1.png" height="60" alt="">
                     <div class="title">管理咨询</div>
                     <div class="content">
                         管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
@@ -259,33 +261,33 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
+                    <img src="image/3.png" height="60" alt="">
                     <div class="title">管理咨询</div>
                     <div class="content">
-                        管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
+                        正规且透明的安装服务，为客户带来更加简单快捷的合作模式，使合作的方式更加扁平化。
                     </div>
                 </div>
             </div>
             <div class="clearfix content">
                 <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
-                    <div class="title">管理咨询</div>
+                    <img src="image/4.png" height="60" alt="">
+                    <div class="title">用户咨询</div>
                     <div class="content">
-                        管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
+                         主要技术培训范围主要集中在检验信息管理系统软件及检验信息管理系统软件相关的电脑软硬件知识
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
-                    <div class="title">管理咨询</div>
+                    <img src="image/5.png" height="60" alt="">
+                    <div class="title">日常运维</div>
                     <div class="content">
-                        管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
+                        北京、上海、广州地区三级甲等用户实施工程师常驻运维。 目前，其余地区实施定期定量巡访维护制。
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
-                    <div class="title">管理咨询</div>
+                    <img src="image/6.png" height="60" alt="">
+                    <div class="title">技术支持</div>
                     <div class="content">
-                        管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
+                        日常/值班时间问题：在24小时内提供解决方案和实施解决方案。
                     </div>
                 </div>
             </div>
@@ -355,6 +357,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/constant.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
