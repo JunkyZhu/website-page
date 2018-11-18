@@ -8,131 +8,120 @@
     <title>新程</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="css/header.css">
-   <link href="css/index.css" rel="stylesheet">
-   <link href="css/banner.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="padding: 0"><img src="image/logo1.png" alt="">    </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
-                <ul class="nav navbar-nav">
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./about.html">关于新程</a></li>
-                    <li><a href="./product.html">产品&方案</a></li>
-                    <li><a href="./news.html">新闻</a></li>
-                    <li class="active"><a href="./service.html">服务</a></li>
-                    <li><a href="./hire.html">人才招聘</a></li>
-                    <li><a href="./download.html">相关下载</a></li>
-                    <li><a href="./contact.html">联系我们</a></li>
-                   
-                </ul>
-            </div>
-            <!-- <div class="nav-product-list">
-                <div class="flex">
-                    <div style="flex: 1"></div>
-                    <div class="flex" style="width: 50%;">
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!--/.nav-collapse -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding: 0"><img src="image/logo1.png" alt=""> </a>
         </div>
-    </nav>
-    <div class="banner">
+        <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于新程</a></li>
+                <li  id="productNav"><a href="./product.html">产品&方案</a></li>
+                <li><a href="./news.html">新闻</a></li>
+                <li class="active"><a href="./service.html">服务</a></li>
+                <li><a href="./hire.html">人才招聘</a></li>
+                <li><a href="./download.html">相关下载</a></li>
+                <li><a href="./contact.html">联系我们</a></li>
+
+            </ul>
+        </div>
+        <div class="nav-product-list">
+            <div class="flex">
+                <div style="flex: 1"></div>
+                <div class="flex" id="productList" style="width: 50%;">
+                </div>
+            </div>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="banner">
+    <div class="center">
+        <div style="font-size: 32px;">产品&方案</div>
+        <div style="font-size: 16px;color: #d6d6d6">新程科技 关心你我的未来</div>
+    </div>
+</div>
+<div class="page">
+    <div class="center clearfix">
+        <div class="col-md-3 col-xs-12">
+            <div class="content-title">服务</div>
+            <div class="en-title">Service</div>
+            <div class="pro-list" id="product-list">
+               
+            </div>
+        </div>
+        <div class="col-md-9 col-xs-12">
+            <div class="sub-pro-list" id="sub-product-list">
+                
+            </div>
+            <div id="product-detail"></div>
+           
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="page footer">
         <div class="center">
-            <div style="font-size: 32px;">产品&方案</div>
-            <div style="font-size: 16px;color: #d6d6d6">新程科技 关心你我的未来</div>
-        </div>
-    </div>
-    <div class="page">
-        <div class="center clearfix">
-            <div class="col-md-3 col-xs-12">
-                <div class="content-title">服务</div>
-                <div class="en-title">Service</div>
-                <div class="pro-list">
-                    <div class="pro-item active">实验室信息系统</div>
-                    <div class="pro-item">流水线中间件数据平台</div>
-                    <div class="pro-item">实验室管理软件</div>
-                </div>
+            <div class="footer-nav flex flex-align">
+                <a href="./index.html">首页</a>
+                <a href="./about.html">关于新程</a>
+                <a href="./product.html">产品&方案</a>
+                <a href="./service.html">服务</a>
+                <a href="./hire.html">人才招聘</a>
+                <a href="./contact.html">联系我们</a>
             </div>
-            <div class="col-md-9 col-xs-12">
-                <div class="sub-pro-list">
-                    <div class="pro-item active">实验室信息系统</div>
-                    <div class="pro-item">流水线中间件数据平台</div>
-                    <div class="pro-item">实验室管理软件</div>
-                </div>
-                <div></div>
-                上海新程医学科技信息有限公司（简称：新程科技[XCSoft]）始于2017年，是致力于临床与医学实验室信息管理专业软件研发与应用的公司，融产品研发设计、生产定制、市场销售、服务维护于一体，拥有医疗软件领域完整产业链。 作为研发驱动型高科技企业，公司依托实验室信息化管理为基础，结合医学实验室中间件、医学实验室质量管理、实验室周边管理解决方案，逐步推进医疗器械渠道商与供应链管理平台，形成医学实验室一体化多维度综合管理。向高端用户提供整体IT业务流程改进咨询服务，相关系统解决方案广泛应用于三级甲等及以上的综合性医院、专业医院、卫生医疗智能部门以及商业独立实验室等客户群体。
-            </div>    
-        </div>
-    </div>
-    <footer>
-        <div class="page footer">
-            <div class="center">
-                <div class="footer-nav flex flex-align">
-                    <a href="">首页</a>
-                    <a href="">关于新程</a>
-                    <a href="">产品&方案</a>
-                    <a href="">服务</a>
-                    <a href="">人才招聘</a>
-                    <a href="">联系我们</a>
-                </div>
+            <div  id="companyInfo">
                 <div class="base-info clearfix">
                     <div class="col-xs-12 col-md-4 text-center">
                         <img src="image/dw.png" width="20" alt="">
                         上海市静安区胶州路397号14幢9楼BC座
                     </div>
-                        <div class="col-xs-12 col-md-4 text-center">
-                            <img src="image/dh.png" width="20" alt="">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <img src="image/dh.png" width="20" alt="">
                         86-21-51580577
                     </div>
-                            <div class="col-xs-12 col-md-4 text-center">
-                                <img src="image/yx.png" width="20" alt="">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <img src="image/yx.png" width="20" alt="">
                         46697186@qq.com
                     </div>
-                            </div>
-                            <div class="copyright">
-                                Copyright &copy;2017 上海新程医学科技有限公司保留所有权利&nbsp; 沪ICP备17052502号
-                            </div>
-                        </div>
-                    </div>
-    </footer>
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="js/jquery.1.12.4.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="js/bootstrap.min.js"></script>
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2017 上海新程医学科技有限公司保留所有权利&nbsp; 沪ICP备17052502号
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/jquery.1.12.4.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/constant.js"></script>
+<script src="js/api.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/public.js"></script>
+<script src="js/service.js"></script>
 </body>
 
 </html>

@@ -14,206 +14,197 @@
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-    <nav id="nav-bg" class="navbar navbar-default navbar-fixed-top curr">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="padding: 0"><img src="image/logo1.png" alt="">	</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="./index.html">首页</a></li>
-                    <li><a href="./about.html">关于新程</a></li>
-                    <li id="productNav"><a href="./product.html">产品&方案</a></li>
-                    <li><a href="./news.html">新闻</a></li>
-                    <li><a href="./service.html">服务</a></li>
-                    <li><a href="./hire.html">人才招聘</a></li>
-                    <li><a href="./download.html">相关下载</a></li>
-                    <li><a href="./contact.html">联系我们</a></li>
-                </ul>
-            </div>
-            <div class="nav-product-list">
-                <div class="flex">
-                    <div style="flex: 1"></div>
-                    <div class="flex" style="width: 50%;">
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                        <div class="item">
-                            <div class="title">实验室信息系统</div>
-                            <div class="list">AiLab</div>
-                            <div class="list">CloudLIS</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/.nav-collapse -->
+<nav id="nav-bg" class="navbar navbar-default navbar-fixed-top curr">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding: 0"><img src="image/logo1.png" alt=""> </a>
         </div>
-    </nav>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators" style="bottom: 100px">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="http://www.hejunzongda.com/UpLoadFile/20171211/560bdb0b-81ca-4ea0-94c2-17dc242a53a4.jpg" alt="...">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="item">
-                <img src="http://www.hejunzongda.com/UpLoadFile/20171211/c26ccaa4-3b27-4c4a-9c3d-0595a530e066.jpg" alt="...">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="item">
-                <img src="http://www.hejunzongda.com/UpLoadFile/20180828/b93595ef-05f5-4402-bab1-a8e4ea6d31ab.jpg" alt="...">
-                <div class="carousel-caption">
+        <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.html">首页</a></li>
+                <li><a href="./about.html">关于新程</a></li>
+                <li id="productNav"><a href="./product.html">产品&方案</a></li>
+                <li><a href="./news.html">新闻</a></li>
+                <li><a href="./service.html">服务</a></li>
+                <li><a href="./hire.html">人才招聘</a></li>
+                <li><a href="./download.html">相关下载</a></li>
+                <li><a href="./contact.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="nav-product-list">
+            <div class="flex">
+                <div style="flex: 1"></div>
+                <div class="flex" id="productList" style="width: 50%;">
                 </div>
             </div>
         </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-	        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	        <span class="sr-only">Previous</span>
-	      </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-	        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	        <span class="sr-only">Next</span>
-	      </a>
+        <!--/.nav-collapse -->
     </div>
-    <div class="page">
-        <div class="center main-fav row">
-            <div class="main-item col-md-3 col-xs-12">
-                <div class="know">
-                    <div class="header flex flex-align">
-                        <img class="icon" src="image/tag.png"></img>
-                        <div class="title">了解新程</div>
-                    </div>
-                    <div class="content">
-                        新程科技成立于2017年，致力于临床与医学实验室信息管理专业软件研发与应用的公司。
-                    </div>
-                    <div class="more">
-                        READ MORE
-                    </div>
-                </div>
+</nav>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" style="bottom: 100px">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://www.hejunzongda.com/UpLoadFile/20171211/560bdb0b-81ca-4ea0-94c2-17dc242a53a4.jpg"
+                 alt="...">
+            <div class="carousel-caption">
             </div>
-            <div class="main-item col-md-3 col-xs-12">
-                <div class="know">
-                    <div class="header flex flex-align">
-                        <img class="icon" src="image/task.png"></img>
-                        <div class="title">解决方案</div>
-                    </div>
-                    <div class="content">
-                        新程科技成立于2017年，致力于临床与医学实验室信息管理专业软件研发与应用的公司。
-                    </div>
-                    <div class="more">
-                        READ MORE
-                    </div>
-                </div>
+        </div>
+        <div class="item">
+            <img src="http://www.hejunzongda.com/UpLoadFile/20171211/c26ccaa4-3b27-4c4a-9c3d-0595a530e066.jpg"
+                 alt="...">
+            <div class="carousel-caption">
             </div>
-            <div class="main-item col-md-3 col-xs-12">
-                <div class="know">
-                    <div class="header flex flex-align">
-                        <img class="icon" src="image/position.png"></img>
-                        <div class="title">招贤纳士</div>
-                    </div>
-                    <div class="content">
-                        新程科技成立于2017年，致力于临床与医学实验室信息管理专业软件研发与应用的公司。
-                    </div>
-                    <div class="more">
-                        READ MORE
-                    </div>
-                </div>
+        </div>
+        <div class="item">
+            <img src="http://www.hejunzongda.com/UpLoadFile/20180828/b93595ef-05f5-4402-bab1-a8e4ea6d31ab.jpg"
+                 alt="...">
+            <div class="carousel-caption">
             </div>
-            <div class="main-item col-md-3 col-xs-12">
-                <div class="know">
-                    <div class="header flex flex-align">
-                        <img class="icon" src="image/locate.png"></img>
-                        <div class="title">联系我们</div>
-                    </div>
-                    <div class="content">
-                        新程科技成立于2017年，致力于临床与医学实验室信息管理专业软件研发与应用的公司。
-                    </div>
-                    <div class="more">
-                        READ MORE
-                    </div>
+        </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="page">
+    <div class="center main-fav row">
+        <div class="main-item col-md-3 col-xs-12">
+            <div class="know">
+                <div class="header flex flex-align">
+                    <img class="icon" src="image/tag.png"></img>
+                    <div class="title">了解新程</div>
+                </div>
+                <div class="content" id="know-about">
+                    
+                </div>
+                <div class="more">
+                    <a href="./about.html">READ MORE</a>
                 </div>
             </div>
         </div>
-        <div class="center news" style="margin-top: 130px">
-            <div class="title">新程资讯</div>
-            <div class="sub-title">最新的公司咨询以及行业动态</div>
-            <div class="title-en">News</div>
-            <div class="clearfix content">
-                <div class="left col-md-6 col-xs-12">
-                    <img style="width: 100%" src="http://www.hejunzongda.com/UpLoadFile/20180914/309a4cf7-4e4f-45e8-92c9-3768cde5bc64.jpg" alt="">
+        <div class="main-item col-md-3 col-xs-12">
+            <div class="know">
+                <div class="header flex flex-align">
+                    <img class="icon" src="image/task.png"></img>
+                    <div class="title">产品&方案</div>
+                </div>
+                <div class="content" id="product-list-desc">
+                    <div></div>
+                </div>
+                <div class="more">
+                </div>
+            </div>
+        </div>
+        <div class="main-item col-md-3 col-xs-12">
+            <div class="know">
+                <div class="header flex flex-align">
+                    <img class="icon" src="image/position.png"></img>
+                    <div class="title">招贤纳士</div>
+                </div>
+                <div class="content" id="hireDesc">
+                    新程科技成立于2017年，致力于临床与医学实验室信息管理专业软件研发与应用的公司。
+                </div>
+                <div class="more">
+                    <a href="./hire.html">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-item col-md-3 col-xs-12">
+            <div class="know">
+                <div class="header flex flex-align">
+                    <img class="icon" src="image/locate.png"></img>
+                    <div class="title">联系我们</div>
+                </div>
+                <div class="content" id="contactDesc">
+                    <div>电话： </div>
+                    <div>传真：</div>
+                    <div>地址：xxxxx</div>
+                </div>
+                <div class="more">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center news" style="margin-top: 130px">
+        <div class="title">新程资讯</div>
+        <div class="sub-title">最新的公司咨询以及行业动态</div>
+        <div class="title-en">News</div>
+        <div class="clearfix content" id="news-list">
+            <div class="left col-md-6 col-xs-12">
+                <img style="width: 100%"
+                     src="http://www.hejunzongda.com/UpLoadFile/20180914/309a4cf7-4e4f-45e8-92c9-3768cde5bc64.jpg"
+                     alt="">
+                <div class="date-content">
+                    <div class="day">08</div>
+                    <div class="date">2018.08</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="line flex">
                     <div class="date-content">
                         <div class="day">08</div>
                         <div class="date">2018.08</div>
                     </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="line flex">
-                        <div class="date-content">
-                            <div class="day">08</div>
-                            <div class="date">2018.08</div>
+                    <div class="right">
+                        <div class="news-title">
+                            迈瑞医疗招股书涉嫌造假:五大经销商2家"不真实存在"
                         </div>
-                        <div class="right">
-                            <div class="news-title">
-                                迈瑞医疗招股书涉嫌造假:五大经销商2家"不真实存在"
-                            </div>
-                            <div class="content">
-                                迈瑞医疗净利突增之谜:缘何上市前夕“调节利润“?作者:盖浇饭医疗器械界“华为”即将登陆A股。目前,深圳迈瑞生物医疗电子...
-                            </div>
+                        <div class="content">
+                            迈瑞医疗净利突增之谜:缘何上市前夕“调节利润“?作者:盖浇饭医疗器械界“华为”即将登陆A股。目前,深圳迈瑞生物医疗电子...
                         </div>
                     </div>
-                    <div class="line flex">
-                        <div class="date-content">
-                            <div class="day">08</div>
-                            <div class="date">2018.08</div>
+                </div>
+                <div class="line flex">
+                    <div class="date-content">
+                        <div class="day">08</div>
+                        <div class="date">2018.08</div>
+                    </div>
+                    <div class="right">
+                        <div class="news-title">
+                            迈瑞医疗招股书涉嫌造假:五大经销商2家"不真实存在"
                         </div>
-                        <div class="right">
-                            <div class="news-title">
-                                迈瑞医疗招股书涉嫌造假:五大经销商2家"不真实存在"
-                            </div>
-                            <div class="content">
-                                迈瑞医疗净利突增之谜:缘何上市前夕“调节利润“?作者:盖浇饭医疗器械界“华为”即将登陆A股。目前,深圳迈瑞生物医疗电子...
-                            </div>
+                        <div class="content">
+                            迈瑞医疗净利突增之谜:缘何上市前夕“调节利润“?作者:盖浇饭医疗器械界“华为”即将登陆A股。目前,深圳迈瑞生物医疗电子...
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="page" style="background-color: #fff">
-        <div class="center news product">
-            <div class="title">新程产品</div>
-            <div class="sub-title">新程专业的产品持续研究开发中</div>
-            <div class="title-en">Product</div>
-            <div class="content">
-                <div class="product-list flex" style="justify-content: space-around;">
+</div>
+<div class="page" style="background-color: #fff">
+    <div class="center news product">
+        <div class="title">新程产品</div>
+        <div class="sub-title">新程专业的产品持续研究开发中</div>
+        <div class="title-en">Product</div>
+        <div class="content">
+            <div id="product-sub-list" class="product-list flex" style="justify-content: space-around;">
                     <div class="product-title">
                         <img src="image/shape.png" height="38" alt="">
                         <div class="title active">流水线中间件</div>
@@ -226,140 +217,151 @@
                         <img src="image/li.png" height="38" alt="">
                         <div class="title">LIS周边</div>
                     </div>
-                </div>
-                <div class="line"></div>
+                
             </div>
+            <div class="line"></div>
+        </div>
+        <div class="product-detail">
             <div class="product-title">
                 新程医学实验室中间管理软件V1.0 (简称：DC2000)
             </div>
             <div class="product-content">
-                新程科技基于基础产品AILAB，整合了多年自动化设备连接技术和应用经验，二次研发设计的实验室中间件数据平台，将是新程科技主推的中间件产品。<br> 作为未来实验室智能应用中心，系统可为各IVD设备厂商定制具有其产品个性、提升其性能与应用的中间件软件，为实验室提供全面可靠的多样性IVD设备数据平台。
+                新程科技基于基础产品AILAB，整合了多年自动化设备连接技术和应用经验，二次研发设计的实验室中间件数据平台，将是新程科技主推的中间件产品。<br>
+                作为未来实验室智能应用中心，系统可为各IVD设备厂商定制具有其产品个性、提升其性能与应用的中间件软件，为实验室提供全面可靠的多样性IVD设备数据平台。
             </div>
             <div class="read-more">
                 READ MORE →
             </div>
         </div>
+        
     </div>
-    <div class="page">
-        <div class="center news service">
-            <div class="title">新程服务</div>
-            <div class="sub-title">专业的团队,专业的服务</div>
-            <div class="title-en">Service</div>
-            <div class="clearfix content">
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/1.png" height="60" alt="">
-                    <div class="title">管理咨询</div>
-                    <div class="content">
-                        管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/set.png" height="60" alt="">
-                    <div class="title">定制开发</div>
-                    <div class="content">
-                        为医院量身定制开发，融入了先进的行业管理思想和样本流程，使系统更加易用而且实用，更贴近院方的实际情况。
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/3.png" height="60" alt="">
-                    <div class="title">管理咨询</div>
-                    <div class="content">
-                        正规且透明的安装服务，为客户带来更加简单快捷的合作模式，使合作的方式更加扁平化。
-                    </div>
+</div>
+<div class="page">
+    <div class="center news service" id="service-content">
+        <div class="title">新程服务</div>
+        <div class="sub-title">专业的团队,专业的服务</div>
+        <div class="title-en">Service</div>
+        <!-- <div class="clearfix content" >
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/1.png" height="60" alt="">
+                <div class="title">管理咨询</div>
+                <div class="content">
+                    管理咨询(Management Consulting)，通过对客户现存问题的分析提出改进方案和未来发展方案。
                 </div>
             </div>
-            <div class="clearfix content">
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/4.png" height="60" alt="">
-                    <div class="title">用户咨询</div>
-                    <div class="content">
-                         主要技术培训范围主要集中在检验信息管理系统软件及检验信息管理系统软件相关的电脑软硬件知识
-                    </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/set.png" height="60" alt="">
+                <div class="title">定制开发</div>
+                <div class="content">
+                    为医院量身定制开发，融入了先进的行业管理思想和样本流程，使系统更加易用而且实用，更贴近院方的实际情况。
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/5.png" height="60" alt="">
-                    <div class="title">日常运维</div>
-                    <div class="content">
-                        北京、上海、广州地区三级甲等用户实施工程师常驻运维。 目前，其余地区实施定期定量巡访维护制。
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
-                    <img src="image/6.png" height="60" alt="">
-                    <div class="title">技术支持</div>
-                    <div class="content">
-                        日常/值班时间问题：在24小时内提供解决方案和实施解决方案。
-                    </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/3.png" height="60" alt="">
+                <div class="title">管理咨询</div>
+                <div class="content">
+                    正规且透明的安装服务，为客户带来更加简单快捷的合作模式，使合作的方式更加扁平化。
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <div class="page" style="background: #395dad">
-            <div class="center download">
-                <h1>下载</h1>
-                <div class="clearfix">
-                    <div class="col-xs-12 col-md-4 ">
-                        <div class="title">DT100</div>
-                        <div class="list clearfix">
-                            <div class="col-md-6"><a href="">TOOLS.ZIP</a></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <div class="title">接口工具</div>
-                        <div class="list clearfix">
-                            <div class="col-md-6"><a href="">LabBoxs123.exe</a></div>
-                            <div class="col-md-6"><a href="">abc.exe</a></div>
-                            <div class="col-md-6"><a href="">LabBoxs123abc.exe</a></div>
-                            <div class="col-md-6"><a href="">LCssssabc.exe</a></div>
-                            <div class="col-md-6"><a href="">abc.exe</a></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <div class="title">控件</div>
-                        <div class="list clearfix">
-                            <div class="col-md-6"><a href="">test.exe</a></div>
-                        </div>
-                    </div>
+        <div class="clearfix content">
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/4.png" height="60" alt="">
+                <div class="title">用户咨询</div>
+                <div class="content">
+                    主要技术培训范围主要集中在检验信息管理系统软件及检验信息管理系统软件相关的电脑软硬件知识
                 </div>
             </div>
-        </div>
-        <div class="page footer">
-            <div class="center">
-                <div class="footer-nav flex flex-align">
-                    <a href="">首页</a>
-                    <a href="">关于新程</a>
-                    <a href="">产品&方案</a>
-                    <a href="">服务</a>
-                    <a href="">人才招聘</a>
-                    <a href="">联系我们</a>
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/5.png" height="60" alt="">
+                <div class="title">日常运维</div>
+                <div class="content">
+                    北京、上海、广州地区三级甲等用户实施工程师常驻运维。 目前，其余地区实施定期定量巡访维护制。
                 </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 flex flex-align">
+                <img src="image/6.png" height="60" alt="">
+                <div class="title">技术支持</div>
+                <div class="content">
+                    日常/值班时间问题：在24小时内提供解决方案和实施解决方案。
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<footer>
+    <div class="page" style="background: #395dad">
+        <div class="center download">
+            <h1>下载</h1>
+            <div class="clearfix" id="download-list"><!-- 
+                <div class="col-xs-12 col-md-4 ">
+                    <div class="title">DT100</div>
+                    <div class="list clearfix">
+                        <div class="col-md-6"><a href="">TOOLS.ZIP</a></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="title">接口工具</div>
+                    <div class="list clearfix">
+                        <div class="col-md-6"><a href="">LabBoxs123.exe</a></div>
+                        <div class="col-md-6"><a href="">abc.exe</a></div>
+                        <div class="col-md-6"><a href="">LabBoxs123abc.exe</a></div>
+                        <div class="col-md-6"><a href="">LCssssabc.exe</a></div>
+                        <div class="col-md-6"><a href="">abc.exe</a></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="title">控件</div>
+                    <div class="list clearfix">
+                        <div class="col-md-6"><a href="">test.exe</a></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="page footer">
+        <div class="center">
+            <div class="footer-nav flex flex-align">
+                <a href="./index.html">首页</a>
+                <a href="./about.html">关于新程</a>
+                <a href="./product.html">产品&方案</a>
+                <a href="./service.html">服务</a>
+                <a href="./hire.html">人才招聘</a>
+                <a href="./contact.html">联系我们</a>
+            </div>
+            <div  id="companyInfo">
                 <div class="base-info clearfix">
                     <div class="col-xs-12 col-md-4 text-center">
                         <img src="image/dw.png" width="20" alt="">
-                		上海市静安区胶州路397号14幢9楼BC座
-                	</div>
-                        <div class="col-xs-12 col-md-4 text-center">
-                            <img src="image/dh.png" width="20" alt="">
-                		86-21-51580577
-                	</div>
-                            <div class="col-xs-12 col-md-4 text-center">
-                                <img src="image/yx.png" width="20" alt="">
-                		46697186@qq.com
-                	</div>
-                            </div>
-                            <div class="copyright">
-                                Copyright &copy;2017 上海新程医学科技有限公司保留所有权利&nbsp; 沪ICP备17052502号
-                            </div>
-                        </div>
+                        上海市静安区胶州路397号14幢9楼BC座
                     </div>
-    </footer>
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/constant.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/index.js"></script>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <img src="image/dh.png" width="20" alt="">
+                        86-21-51580577
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <img src="image/yx.png" width="20" alt="">
+                        46697186@qq.com
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2017 上海新程医学科技有限公司保留所有权利&nbsp; 沪ICP备17052502号
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/day.js"></script>
+<script src="js/constant.js"></script>
+<script src="js/api.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/public.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>

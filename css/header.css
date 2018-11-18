@@ -1,6 +1,9 @@
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
+a {
+    color: #fff;
+}
 .navbar-brand {
     /*height: 80px;*/
     color: blue;
@@ -12,7 +15,7 @@ body {
 .navbar.curr {
     background: rgba(244, 244, 244, 0.4)
 }
-.nav.navbar-nav.curr .active a {
+.navbar-default.curr .navbar-nav a {
     color: #fff;
 }
 .navbar-brand img {
