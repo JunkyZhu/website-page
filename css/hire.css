@@ -1,5 +1,5 @@
 .hire-list {
-	width: 1040px;
+	max-width: 1040px;
 	margin:  45px auto;
 	background:rgba(250,250,250,1);
 }
@@ -38,4 +38,20 @@
 	position: absolute;
 	top: 30px;
 	right: 30px; 
+}
+.hire-btn:hover {
+	color: #fff;
+}
+@media (max-width: 768px) {
+    .hire-info {
+		
+		flex-direction: column
+	}
+	.hire-info > div+div {
+		margin-left: 0
+	}
+	.pro-item {
+		width: 100%;
+		margin-bottom: 20px
+	}
 }

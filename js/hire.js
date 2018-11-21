@@ -15,11 +15,11 @@ $(function () {
                     </div>
                     <div class="hire-content" style="margin-top: 20px;">
                         <h4>工作职责: </h4>
-                        <div style="white-space: pre-wrap; word-wrap: break-word;">${item.duty}</div>
+                        <div class="ql-editor">${item.duty}</div>
                     </div>
                     <div class="hire-content" style="margin-top: 20px;">
                         <h4>任职要求: </h4>
-                        <div style="white-space: pre-wrap; word-wrap: break-word;">${item.requirement}</div>
+                        <div class="ql-editor">${item.requirement}</div>
                     </div>
                 </div>`
             })

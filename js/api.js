@@ -34,13 +34,16 @@ const getCompany = function () {
         url: domain + '/companies/1',
     })
 }
-$("#productNav").hover(function () {
-    $(".nav-product-list").show();
-}, function () {
-    $(".nav-product-list").hide();
-});
-$(".nav-product-list").hover(function () {
-    $(".nav-product-list").show();
-}, function () {
-    $(".nav-product-list").hide();
-});
+if($(window).width()>768){
+    $("#productNav").hover(function () {
+        $(".nav-product-list").show();
+    }, function () {
+        $(".nav-product-list").hide();
+    });
+    $(".nav-product-list").hover(function () {
+        $(".nav-product-list").show();
+    }, function () {
+        $(".nav-product-list").hide();
+    });
+}
+

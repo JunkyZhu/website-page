@@ -73,11 +73,12 @@ $(function () {
     })
 });
 function setProductDetail(val) {
-	$('.product-detail').html(`<div class="product-title">
+    // <div class="product-title">
+    //             ${val.summary}
+    //         </div>
+	$('.product-detail').html(`
+            <div class="product-content ql-editor">
                 ${val.summary}
-            </div>
-            <div class="product-content">
-                ${val.content}
             </div>
             <div class="read-more">
                 <a style="color: #395dad" href="./product.html?categoryId=${val.categoryId}&id=${val.id}">READ MORE →</a>
@@ -91,12 +92,15 @@ function setBannerNews() {
 		let html = ``
 		if (list.length >= 2) {
 			html += `<div class="left col-md-6 col-xs-12" onclick="location.href='./news.html?categoryId=${list[0].categoryId}&id=${list[0].id}'">
-                <img style="width: 100%"
+                <img style="width: 100%;object-fit: cover;height: 300px;"
                      src="${list[0].imageUrl}"
                      alt="">
                 <div class="date-content">
                     <div class="day" >${formatDay(list[0].modifiedTime)}</div>
                     <div class="date">${formatMonth(list[0].modifiedTime)}</div>
+                </div>
+                <div style="position:relative; width: 100%">
+                    <div class="news-main-title">${list[0].title}</div>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">

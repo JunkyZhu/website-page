@@ -79,7 +79,7 @@ function setMethods(category,id,detailId,categoryId,productId) {
                 }
             })
         }
-        if (val.totalPages ) {
+        if (val.totalPages && val.totalPages !== 1) {
             $.jqPaginator('#pagination', {
                 totalPages: val.totalPages,
                 visiblePages: 3,
@@ -109,7 +109,7 @@ function setMethods(category,id,detailId,categoryId,productId) {
                             $(`#${id} .news-item .news-title`).click(function(event) {
                                 /* Act on the event */  
                                 getArticle($(this).data('id')).done(val => {
-                                    $(`#${id}`).html(val.content)
+                                    $(`#${id}`).html(`<h2>${val.title}</h2><div>${val.content}</div>`)
                                 })
                             });
                         })
@@ -131,7 +131,7 @@ function setMethods(category,id,detailId,categoryId,productId) {
             /* Act on the event */  
             getArticle($(this).data('id')).done(val => {
                 $('#pagination').hide();
-                $(`#${id}`).html(val.content)
+                $(`#${id}`).html(`<h2>${val.title}</h2><div>${val.content}</div>`)
             })
         });
     })

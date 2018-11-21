@@ -3,7 +3,9 @@
 	margin-top: 54px;
 	padding: 100px 0;
 	color: #fff;
-	text-align: center
+	text-align: center;
+	    background-position: center center;
+    background-repeat: no-repeat;
 }
 .content-title {
 	color: #393939;
@@ -38,4 +40,15 @@
 	border-bottom: 1px solid #395dad;
 	cursor: pointer
 	
+}
+@media (max-width: 768px) {
+    .sub-pro-list {
+		display: flex;
+		margin-bottom: 30px;
+		flex-direction: column
+	}
+	.pro-item {
+		width: 100%;
+		margin-bottom: 20px
+	}
 }
