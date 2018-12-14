@@ -68,6 +68,7 @@ function setMethods(category,id,detailId,categoryId,productId) {
     getArticleList({
         articleClass: category,
         categoryId:categoryId,
+        size: 10
     }).done(val => {
         val.totalPages && val.totalElements > val.size && $('#pagination').show();
         let html = ``
@@ -94,7 +95,8 @@ function setMethods(category,id,detailId,categoryId,productId) {
                         getArticleList({
                             articleClass: category,
                             categoryId:categoryId,
-                            page: num
+                            page: num,
+                            size: 10
                         }).done(val => {
                             let html = ``
                             val.content.forEach((item,index) => {

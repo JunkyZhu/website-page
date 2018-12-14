@@ -14,7 +14,7 @@ const setBanner = (list) => {
                 <div class="carousel-caption">
                 </div>
             </div>`
-            dotHtml += `<li data-target="#carousel-example-generic" data-slide-to="0"></li>` 
+            dotHtml += `<li data-target="#carousel-example-generic" data-slide-to="${index}"></li>` 
 		}
 		
 	})

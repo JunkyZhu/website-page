@@ -14,11 +14,77 @@ $(function () {
                 index++
                 let str = `<div class="item">
                             <div class="title" data-categoryId='${item.id}'>${item.name}</div>`
-                value.content.forEach(itemData => {
-                    str += `<div class="list"  onclick="location.href='./product.html?categoryId=${itemData.categoryId}&id=${itemData.id}'" data-id='${itemData.id}' data-categoryId='${itemData.categoryId}'>${itemData.title}</div>`
+                value.content.forEach((itemData,index) => {
+                    if (index <= 4) {
+                        str += `<div class="list"  onclick="location.href='./product.html?categoryId=${itemData.categoryId}&id=${itemData.id}'" data-id='${itemData.id}' data-categoryId='${itemData.categoryId}'>${itemData.title}</div>`
+                    }
+                    
                 })
+                if (value.content.length > 5) {
+                    str += `<div class="list"  onclick="location.href='./product.html?categoryId=${item.id}&id=${value.content[0].id}'" style="text-align: right">查看更多></div>`
+                }
                 str += '</div>'
                 $('#productList').append(str)
+                productNav += str
+            })
+        }
+        
+    })
+    getCategories('SOLUTION').done(val => {
+        let canReqest = true
+        let index = 0
+        while(canReqest && index < val.length) {
+            let item = val[index]
+            canReqest = false
+            getArticleList({
+                articleClass: 'SOLUTION',
+                categoryId: item.id
+            }).done(value => {
+                canReqest = true
+                index++
+                let str = `<div class="item">
+                            <div class="title" data-categoryId='${item.id}'>${item.name}</div>`
+                value.content.forEach((itemData,index) => {
+                    if (index <= 4) {
+                        str += `<div class="list"  onclick="location.href='./project.html?categoryId=${itemData.categoryId}&id=${itemData.id}'" data-id='${itemData.id}' data-categoryId='${itemData.categoryId}'>${itemData.title}</div>`
+                    }
+                    
+                })
+                if (value.content.length > 5) {
+                    str += `<div class="list"  onclick="location.href='./project.html?categoryId=${item.id}&id=${value.content[0].id}'" style="text-align: right">查看更多></div>`
+                }
+                str += '</div>'
+                $('#solutionList').append(str)
+                productNav += str
+            })
+        }
+        
+    })
+    getCategories('SERVICE').done(val => {
+        let canReqest = true
+        let index = 0
+        while(canReqest && index < val.length) {
+            let item = val[index]
+            canReqest = false
+            getArticleList({
+                articleClass: 'SERVICE',
+                categoryId: item.id
+            }).done(value => {
+                canReqest = true
+                index++
+                let str = `<div class="item">
+                            <div class="title" data-categoryId='${item.id}'>${item.name}</div>`
+                value.content.forEach((itemData,index) => {
+                    if (index <= 4) {
+                        str += `<div class="list"  onclick="location.href='./service.html?categoryId=${itemData.categoryId}&id=${itemData.id}'" data-id='${itemData.id}' data-categoryId='${itemData.categoryId}'>${itemData.title}</div>`
+                    }
+                    
+                })
+                if (value.content.length > 5) {
+                    str += `<div class="list"  onclick="location.href='./service.html?categoryId=${item.id}&id=${value.content[0].id}'" style="text-align: right">查看更多></div>`
+                }
+                str += '</div>'
+                $('#serviceList').append(str)
                 productNav += str
             })
         }
@@ -82,8 +148,10 @@ const setDownload = function() {
                 categoryId: item.id
             }).done(value => {
                 canReqest = true
-                index++
-                let str = `<div class="col-xs-12 col-md-4 ">
+                
+                let str = ``
+                
+                str += `<div class="col-xs-12 col-md-4 ">
                     <div class="title">${item.name}</div>
                     <div class="list clearfix">`
                 value.content.forEach(itemData => {
@@ -91,6 +159,10 @@ const setDownload = function() {
                 })
                 str += `</div>
                 </div>`
+                if((index+1) %3 == 0) {
+                    str += `<div class="row"></div>`
+                }
+                index++
                 $('#download-list').append(str)
             })
         }

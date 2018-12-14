@@ -11,6 +11,10 @@
 	font-size:18px;
 	font-family:Helvetica;
 	color:rgba(57,57,57,1);
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 300px;
 }
 .news-item .news-title:hover {
 	cursor: pointer;

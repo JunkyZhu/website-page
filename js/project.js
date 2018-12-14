@@ -1,6 +1,6 @@
 $(function() {
 	let obj = getUrlQuery()
-	getCategories('PRODUCT').done(val => {
+	getCategories('SOLUTION').done(val => {
 		let html = ``
 		let idx = 0
 		if (obj.id) {
@@ -22,9 +22,9 @@ $(function() {
 		$('#product-list .pro-item').click(function(event) {
 			$('#product-list .pro-item').removeClass('active')
 			$(this).addClass('active')
-			setMethods('PRODUCT','sub-product-list','product-detail',$(this).data('id'))
+			setMethods('SOLUTION','sub-product-list','product-detail',$(this).data('id'))
 		});
-		setMethods('PRODUCT','sub-product-list','product-detail',val[idx].id,obj.id)
+		setMethods('SOLUTION','sub-product-list','product-detail',val[idx].id,obj.id)
 	})
 })
 function setMethods(category,id,detailId,categoryId,productId) {

@@ -44,12 +44,9 @@ function setMethods(category,id,detailId,categoryId,productId) {
 		
 		val.content.forEach((item,index) => {
 			if (index == idx) {
-				html += `<div class="pro-item active"  data-id="${item.id}">${item.title}</div>`
+				html += `<div class="pro-item active"  data-toggle="tooltip" data-placement="top" title="${item.title}" data-id="${item.id}">${item.title}</div>`
 			} else {
-				html += `<div class="news-item">
-                        <div class="news-title">新程发布最新管理软件</div>
-                        <div class="date">2018.02.08</div>
-                    </div>`
+				html += `<div class="pro-item" data-id="${item.id}" data-toggle="tooltip" data-placement="top" title="${item.title}" >${item.title}</div>`
 			}
 			
 		})
@@ -63,5 +60,17 @@ function setMethods(category,id,detailId,categoryId,productId) {
 				$(`#${detailId}`).html(val.content)
 			})
 		});
+		$('[data-toggle="tooltip"]').tooltip()
 	})
 }
+$('#sub-product-list').hover(function() {
+	/* Stuff to do when the mouse enters the element */
+	$('#toggle span').removeClass('glyphicon-chevron-down');
+	$('#toggle span').addClass('glyphicon-chevron-up');
+	$('#sub-product-list').addClass('min-product-height');
+}, function() {
+	/* Stuff to do when the mouse leaves the element */
+	$('#toggle span').removeClass('glyphicon-chevron-up');
+	$('#toggle span').addClass('glyphicon-chevron-down');
+	$(this).removeClass('min-product-height')
+});

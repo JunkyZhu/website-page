@@ -22,17 +22,38 @@
 }
 .sub-pro-list {
 	display: flex;
-	margin-bottom: 30px
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+	height: 59px;
+	overflow: hidden;
+	border: 1px solid transparent
+}
+.toggle {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.min-product-height {
+	height: auto;
+	box-shadow:0px 2px 8px 0px rgba(154,154,154,0.5);
+	border:1px solid rgba(230,230,230,1);
+}
+.toggle span{
+	font-size: 20px;
+    color: #395DAD;
+    cursor: pointer;
 }
 .sub-pro-list .pro-item {
-	width: auto;
-	padding: 3px 8px;
+	width: 20%;
+	padding: 18px 18px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .pro-item {
 	padding: 10px 0;
 	width: 200px;
 	border-bottom: 1px solid rgba(234,234,234,1);
-	flex: 1;
     text-align: center;
 }
 .pro-item:hover, .pro-item.active {
@@ -47,7 +68,7 @@
 		margin-bottom: 30px;
 		flex-direction: column
 	}
-	.pro-item {
+	.sub-pro-list .pro-item{
 		width: 100%;
 		margin-bottom: 20px
 	}

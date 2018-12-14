@@ -1,4 +1,11 @@
-
+.carousel-indicators .active {
+    margin:  0 10px;
+}
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    margin: 0 10px;
+}
 #carousel-example-generic .carousel-inner img {
     width: 100%;
     min-height: 300px;
@@ -240,7 +247,7 @@
         background: rgba(244, 244, 244, 0.4)
     }
     .navbar-default.curr .navbar-nav a {
-        color: #fff;
+        color: #395dad;
     }
 }
 

@@ -51,13 +51,17 @@ $(function () {
     	let html1 = ``
     	val.content.forEach((item,index) => {
     		if (index <= 2) {
-    			html += `<div><a href="./product.html?categoryId=${item.categoryId}&id=${item.id}">${item.title}</a></div>`
+    			html += `<div style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><a href="./product.html?categoryId=${item.categoryId}&id=${item.id}">${item.title}</a></div>`
     			html1 += `<div class="product-title">
                     <img src="${item.icoUrl}" height="38" alt="">
                     <div class="title" data-id="${item.id}">${item.title}</div>
                 </div>`
+
+
     		}
+
     	})
+       
     	$('#product-sub-list').html(html1)
     	$('#product-sub-list').find('.product-title:first-child').find('.title').addClass('active')
     	$('#product-list-desc').html(html)
@@ -91,48 +95,55 @@ function setBannerNews() {
 		let list = val.content
 		let html = ``
 		if (list.length >= 2) {
-			html += `<div class="left col-md-6 col-xs-12" onclick="location.href='./news.html?categoryId=${list[0].categoryId}&id=${list[0].id}'">
+            if (list[0]) {
+                html += `<div class="left col-md-6 col-xs-12" onclick="location.href='./news.html?categoryId=${list[0].categoryId}&id=${list[0].id}'">
                 <img style="width: 100%;object-fit: cover;height: 300px;"
-                     src="${list[0].imageUrl}"
+                     src="${list[0] && list[0].imageUrl}"
                      alt="">
                 <div class="date-content">
-                    <div class="day" >${formatDay(list[0].modifiedTime)}</div>
-                    <div class="date">${formatMonth(list[0].modifiedTime)}</div>
+                    <div class="day" >${formatDay(list[0] && list[0].modifiedTime)}</div>
+                    <div class="date">${formatMonth(list[0] && list[0].modifiedTime)}</div>
                 </div>
                 <div style="position:relative; width: 100%">
-                    <div class="news-main-title">${list[0].title}</div>
+                    <div class="news-main-title">${list[0] && list[0].title}</div>
                 </div>
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <div class="line flex">
+            </div>`
+            }
+			html += `<div class="col-md-6 col-xs-12">`
+            if (list[1]) {
+                html += `<div class="line flex">
                     <div class="date-content">
-                        <div class="day">${formatDay(list[1].modifiedTime)}</div>
-                        <div class="date">${formatMonth(list[1].modifiedTime)}</div>
+                        <div class="day">${formatDay(list[1] && list[1].modifiedTime)}</div>
+                        <div class="date">${formatMonth(list[1] && list[1].modifiedTime)}</div>
                     </div>
                     <div class="right">
                         <div class="news-title" onclick="location.href='./news.html?categoryId=${list[1].categoryId}&id=${list[1].id}'">
-                        	${list[1].title}
+                            ${list[1] && list[1].title}
                         </div>
                         <div class="content">
-                            ${list[1].summary}
+                            ${list[1] && list[1].summary}
                         </div>
                     </div>
-                </div>
-                <div class="line flex">
+                </div>`
+            }
+            if (list[2]) {
+                html += `<div class="line flex">
                     <div class="date-content">
-                        <div class="day">${formatDay(list[2].modifiedTime)}</div>
-                        <div class="date">${formatMonth(list[2].modifiedTime)}</div>
+                        <div class="day">${formatDay(list[2] && list[2].modifiedTime)}</div>
+                        <div class="date">${formatMonth(list[2] && list[2].modifiedTime)}</div>
                     </div>
                     <div class="right">
                         <div class="news-title" onclick="location.href='./news.html?categoryId=${list[2].categoryId}&id=${list[2].id}'">
-                            ${list[2].title}
+                            ${list[2] && list[2].title}
                         </div>
                         <div class="content">
-                        	${list[2].summary}
+                            ${list[2] && list[2].summary}
                         </div>
                     </div>
-                </div>
-            </div>`
+                </div>`
+            }    
+                
+            html+= `</div>`
 		}
 		$('#news-list').html(html)
 	})

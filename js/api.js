@@ -11,9 +11,11 @@ const getCategories = function (className) {
     })
 }
 const getArticleList = function (param,isAsync =false) {
+    
+    let obj = Object.assign({}, param, {size: param.size||1000})
     return $.ajax({
         url: domain + '/articles',
-        data: param,
+        data: obj,
         async: isAsync,
     })
 }
@@ -34,16 +36,41 @@ const getCompany = function () {
         url: domain + '/companies/1',
     })
 }
+const getHistory = function() {
+    return $.ajax({
+        url: domain + '/histories',
+    })
+}
 if($(window).width()>768){
     $("#productNav").hover(function () {
-        $(".nav-product-list").show();
+        $(".nav-product-list.nav-product").show();
     }, function () {
-        $(".nav-product-list").hide();
+        $(".nav-product-list.nav-product").hide();
     });
-    $(".nav-product-list").hover(function () {
-        $(".nav-product-list").show();
+    $(".nav-product-list.nav-product").hover(function () {
+        $(".nav-product-list.nav-product").show();
     }, function () {
-        $(".nav-product-list").hide();
+        $(".nav-product-list.nav-product").hide();
+    });
+    $("#serviceNav").hover(function () {
+        $(".nav-product-list.service").show();
+    }, function () {
+        $(".nav-product-list.service").hide();
+    });
+    $(".nav-product-list.service").hover(function () {
+        $(".nav-product-list.service").show();
+    }, function () {
+        $(".nav-product-list.service").hide();
+    });
+    $("#solutionNav").hover(function () {
+        $(".nav-product-list.solution").show();
+    }, function () {
+        $(".nav-product-list.solution").hide();
+    });
+    $(".nav-product-list.solution").hover(function () {
+        $(".nav-product-list.solution").show();
+    }, function () {
+        $(".nav-product-list.solution").hide();
     });
 }
 
